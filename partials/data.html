@@ -2,38 +2,43 @@
 	<div class="logo">
 		<img src="\img\Labbook Logo.svg" />
 	</div>
-	<img src="\img\Close.svg" class="close-button" ng-click="close()" title="Close">
+	<button class="close-button" ng-click="close()" title="Close">x</button>
 	<div class="toprightbardiv">
 		<a href="#/welcome" ng-click="setDir('back')">
- 			<img src="\img\Back.svg" style="height:50px; width:auto;" />
+ 			<img src="\img\Back.svg" style="position: absolute; right:0px; height:75px; width:auto;" />
 		</a>
 	</div>
 	<div style="top:300px;left:75%;">{{test}}</div>
 	<div class="basictablediv">
-  		<div style="
+      <!--<div style="
   		position:absolute;
 		right: 0px;
 		top:0px;
     	width: 300px;
     	height: 40px;
-    	background:-webkit-linear-gradient(#e52a20,#ce2118);">
-  		</div>
+    	background-color:#e52a20;">
+  		</div>-->
+      <table id="datatable">
+        <tr>
+          <th>Time</th>
+          <th>Value</th>
+        </tr>
+        <tr ng-repeat="point in points">
+          <td>{{point[0]}}</td>
+          <td>{{point[1]}}</td>
+        </tr>
+      </table>
   	</div>
 	<button class="button" id="collectbutton" ng-click="setData()">
 		Plot
 	</button>
   	<div class="graphdatadiv" style="top:600px; left:60px;">
 		<h3> 
-			3.6V
+          {{lastValue}}
 		</h3>
 	</div>
 	<button class="button" id="sensorbutton">
 		Configure Sensor
 	</button>
-
 	<chart ng-model="data"></chart>
-	<div class="greyout">
-	</div>
 </div>
-<div class="greyout">
-	</div>

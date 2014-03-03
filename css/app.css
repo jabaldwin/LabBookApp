@@ -51,13 +51,8 @@ src: url('Harabara.ttf');
 	/*position: absolute;*/
 }
 .close-button {
-	position: absolute;
-	height:20px;
-	right:0px;
-	top:0px;
-	opacity:1;
-	border-color:#ffffff;
-	background-color:#ffffff;
+	padding: 2px 5px 0 5px;
+	font-weight: bold;
 }
 #welcomepage {
 	background-image: url(/img/Labbookbackground.svg);
@@ -112,7 +107,7 @@ src: url('Harabara.ttf');
 .toprightbardiv {
 	position:absolute;
 	right: 0px;
-	top:15px;
+	top:0px;
     width: 150px;
 	height: 60px;
 	margin:15px;
@@ -124,25 +119,17 @@ src: url('Harabara.ttf');
 	top:150px;
     width: 300px;
 	height: 500px;
+    overflow-y: scroll;
 	margin:15px;
 	background-color:rgba(250,250,250,1);
 	border-color:rgba(175,175,175,1);
 	border:1px solid;
 	border-radius:2px;
 }
-.greyout {
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:1366;
-	height:720;
-	background-color:rgba(75,75,75,.5);
-
-}
 .button {
 	border:2px solid;
 	border-color:#e52a20;
-	background:-webkit-linear-gradient(#e52a20,#ce2118);
+	background-color:#e52a20;
 	border-radius:2px;
 	font-size: 12pt;
 	font-weight: bolder;
@@ -151,12 +138,12 @@ src: url('Harabara.ttf');
 	color: white;
 }
 .button:hover {
-	border-color:#a31a13;
-	box-shadow: 0px 1px 3px #888888;
+	border-color:#ffffff;
+	/*box-shadow: 0px 2px 2px #888888;*/
 }
 .button:active {
-	background:-webkit-linear-gradient(#b31d15,#e22d24,#b31d15);
-	border-color:#8a1610;
+	background-color:#d5190d;
+	border-color:#831510;
 }
 #collectbutton.button {
 	position:absolute;
@@ -201,4 +188,22 @@ chart {
   position:relative;
   width:800px;
   height:450px;
+}
+
+#datatable {
+  width: 285px;
+  border-collapse: collapse;
+}
+
+#datatable th {
+  color: #ffffff;
+  background-color: #e52a20;
+  border: 1px solid #e52a20;
+  border-left: none;
+}
+
+#datatable td {
+  border: 1px solid #000000;
+  border-left: none;  
+  background-color: #ffffff;
 }
